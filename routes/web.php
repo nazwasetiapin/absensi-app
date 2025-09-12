@@ -55,7 +55,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/absensi/checkin', [AbsensiController::class, 'checkin'])->name('absensi.checkin');
         Route::post('/absensi/checkout', [AbsensiController::class, 'checkout'])->name('absensi.checkout');
 
-        // Face ID (dalam konteks absensi)
+        // Face ID
         Route::get('/absensi/face-register', [AbsensiController::class, 'faceRegister'])->name('absensi.face.register');
         Route::post('/absensi/face-register', [AbsensiController::class, 'faceRegisterStore'])->name('absensi.face.register.store');
         Route::get('/absensi/face-register', [AbsensiController::class, 'faceRegister'])->name('absensi.face.register');
